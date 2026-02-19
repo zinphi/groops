@@ -9347,6 +9347,34 @@ Name & Type & Annotation\\
 
 \clearpage
 %==================================
+\subsection{NggmL1b2SatelliteTracking}\label{NggmL1b2SatelliteTracking}
+This program converts low-low satellite data measured by the K-band ranging system
+from the NGGM SDS format (KBR1B or LRI1B) into \file{instrument file (SATELLITETRACKING)}{instrument}.
+The \config{inputfile}s contain also corrections to antenna offsets
+and the so called light time correction. The corrections can be stored in additional files
+in the same format as the observations.
+If only A-channel SNR values are available, K\_B\_SNR and Ka\_B\_SNR are written as 0
+to keep the output layout consistent with \program{GraceL1b2SatelliteTracking}.
+If a phase break is found an artificial gap is created.
+For further information see \program{GraceL1b2Accelerometer}.
+
+
+\keepXColumns
+\begin{tabularx}{\textwidth}{N T A}
+\hline
+Name & Type & Annotation\\
+\hline
+\hfuzz=500pt\includegraphics[width=1em]{element.pdf}~outputfileSatelliteTracking & \hfuzz=500pt filename & \hfuzz=500pt SATELLITETRACKING\\
+\hfuzz=500pt\includegraphics[width=1em]{element.pdf}~outputfileAntCentr & \hfuzz=500pt filename & \hfuzz=500pt SATELLITETRACKING\\
+\hfuzz=500pt\includegraphics[width=1em]{element.pdf}~outputfileLighttime & \hfuzz=500pt filename & \hfuzz=500pt SATELLITETRACKING\\
+\hfuzz=500pt\includegraphics[width=1em]{element.pdf}~outputfileSNR & \hfuzz=500pt filename & \hfuzz=500pt MISCVALUES(K\_A\_SNR, Ka\_A\_SNR, K\_B\_SNR, Ka\_B\_SNR, qualflg), K\_B\_SNR and Ka\_B\_SNR are set to 0 if unavailable in input\\
+\hfuzz=500pt\includegraphics[width=1em]{element.pdf}~outputfileIonoCorr & \hfuzz=500pt filename & \hfuzz=500pt MISCVALUE\\
+\hfuzz=500pt\includegraphics[width=1em]{element-mustset-unbounded.pdf}~inputfile & \hfuzz=500pt filename & \hfuzz=500pt KBR1B or LRI1B\\
+\hline
+\end{tabularx}
+
+\clearpage
+%==================================
 \subsection{NetCdf2GriddedData}\label{NetCdf2GriddedData}
 This program converts a COARDS compliant NetCDF file into an
 \configFile{outputfileGriddedData}{griddedData}.

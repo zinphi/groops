@@ -23369,6 +23369,48 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="NggmL1b2SatelliteTracking">
+				<xs:annotation>
+					<xs:documentation>read NGGM L1B data (KBR1B or LRI1B)</xs:documentation>
+					<xs:appinfo>tag: Conversion</xs:appinfo>
+					<xs:appinfo>tag: Grace</xs:appinfo>
+					<xs:appinfo>tag: Instrument</xs:appinfo>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="outputfileSatelliteTracking" type="filename" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SATELLITETRACKING</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="outputfileAntCentr" type="filename" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SATELLITETRACKING</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="outputfileLighttime" type="filename" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SATELLITETRACKING</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="outputfileSNR" type="filename" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>MISCVALUES(K_A_SNR, Ka_A_SNR, K_B_SNR, Ka_B_SNR, qualflg), K_B_SNR and Ka_B_SNR are set to 0 if unavailable in input</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="outputfileIonoCorr" type="filename" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>MISCVALUE</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="inputfile" type="filename" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>KBR1B or LRI1B</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="GraceL1b2StarCamera">
 				<xs:annotation>
 					<xs:documentation>read GRACE L1B data (SCA1B)</xs:documentation>

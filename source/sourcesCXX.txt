@@ -528,6 +528,7 @@ programs/conversion/grace/graceL1b2Magnetometer.cpp
 programs/conversion/grace/graceL1b2Mass.cpp
 programs/conversion/grace/graceL1b2Orbit.cpp
 programs/conversion/grace/graceL1b2SatelliteTracking.cpp
+programs/conversion/grace/nggmL1b2SatelliteTracking.cpp
 programs/conversion/grace/graceL1b2StarCameraCovariance.cpp
 programs/conversion/grace/graceL1b2StarCamera.cpp
 programs/conversion/grace/graceL1b2SteeringMirror.cpp
